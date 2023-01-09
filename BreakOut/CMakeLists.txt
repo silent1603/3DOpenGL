@@ -8,9 +8,11 @@ set(SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
 file(GLOB_RECURSE PROJECT_SOURCES ${SRC_PATH}/*.cpp)
 file(GLOB_RECURSE PROJECT_HEADERS ${SRC_PATH}/*.h)
+file(GLOB_RECURSE PROJECT_RESOURCES ${SRC_PATH}/Resources/*.*)
 
 source_group(TREE ${SRC_PATH} FILES ${PROJECT_SOURCES})
 source_group(TREE ${SRC_PATH} FILES ${PROJECT_HEADERS})
+source_group(TREE ${SRC_PATH} FILES ${PROJECT_RESOURCES})
 
 add_library(BreakOut SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
 
@@ -22,7 +24,10 @@ target_link_libraries(BreakOut   PRIVATE spdlog::spdlog spdlog::spdlog_header_on
                                  PRIVATE Core 
 
 )
-
+add_custom_command(TARGET TinySDL POST_BUILD 
+                   COMMAND ${CMAKE_COMMAND} -E copy_directory 
+                      ${CMAKE_CURRENT_SOURCE_DIR}/Resources ${CMAKE_SOURCE_DIR}/bin/{PROJECT_NAME}/Resources 
+)
 
 set_target_properties(BreakOut PROPERTIES 
         ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/lib"
