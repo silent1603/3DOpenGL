@@ -1,0 +1,187 @@
+{
+  "name": "tinysdl",
+  "version-string": "0.1.0",
+  "dependencies": [
+    {
+      "name": "spdlog",
+      "version>=": "1.11.0",
+      "features": [
+        "benchmark"
+      ],
+      "platform": "!windows"
+    },
+    {
+      "name": "spdlog",
+      "version>=": "1.11.0",
+      "features": [
+        "benchmark",
+        "wchar"
+      ],
+      "platform": "windows"
+    },
+    {
+      "name": "eastl",
+      "version>=": "3.18.00"
+    },
+    {
+      "name": "stb",
+      "version>=": "2021-09-10"
+    },
+    {
+      "name": "freetype",
+      "version>=": "2.12.1",
+      "features": [
+        "brotli",
+        "bzip2",
+        "error-strings",
+        "png",
+        "zlib"
+      ]
+    },
+    {
+      "name": "glad",
+      "version>=": "0.1.36"
+    },
+    {
+      "name": "nlohmann-json",
+      "version>=": "3.11.2"
+    },
+    {
+      "name": "entt",
+      "version>=": "3.11.0"
+    },
+    {
+      "name": "glm",
+      "version>=": "0.9.9.8"
+    },
+    {
+      "name": "assimp",
+      "version>=": "5.2.5"
+    },
+    {
+      "name": "bullet3",
+      "version>=": "3.22",
+      "features": [
+        "multithreading",
+        "double-precision"
+      ]
+    },
+    {
+      "name": "bullet3",
+      "version>=": "3.22",
+      "features": [
+        "multithreading",
+        "double-precision",
+        "rtti"
+      ],
+      "platform": "windows"
+    },
+    {
+      "name": "sdl2",
+      "version>=": "2.24.0",
+      "features": [
+        "vulkan"
+      ]
+    },
+    {
+      "name": "sdl2",
+      "version>=": "2.24.0",
+      "features": [
+        "x11",
+        "wayland",
+        "vulkan"
+      ],
+      "platform": "linux"
+    },
+    {
+      "name": "sdl2-image",
+      "version>=": "2.6.2",
+      "features": [
+        "libjpeg-turbo",
+        "libwebp",
+        "tiff"
+      ]
+    },
+    {
+      "name": "sdl2-mixer",
+      "version>=": "2.6.1",
+      "features": [
+        "fluidsynth",
+        "libflac",
+        "libmodplug",
+        "libvorbis",
+        "mpg123",
+        "nativemidi",
+        "opusfile"
+      ]
+    },
+    {
+      "name": "sdl2-ttf",
+      "version>=": "2.20.0",
+      "features": [
+        "harfbuzz"
+      ]
+    },
+    {
+      "name": "openal-soft",
+      "version>=": "1.22.2"
+    },
+    {
+      "name": "openal-soft",
+      "version>=": "1.22.2",
+      "features": [
+        "pipewire"
+      ],
+      "platform": "linux"
+    },
+    {
+      "name": "imguizmo",
+      "version>=": "1.83"
+    },
+    {
+      "name": "implot",
+      "version>=": "0.14"
+    },
+    {
+      "name": "imgui",
+      "features": [
+        "docking-experimental",
+        "sdl2-binding",
+        "opengl3-binding",
+        "freetype"
+      ],
+      "version>=": "1.85"
+    },
+    {
+      "name": "imgui",
+      "features": [
+        "docking-experimental",
+        "sdl2-binding",
+        "opengl3-binding",
+        "freetype",
+        "wchar32",
+        "win32-binding",
+        "dx9-binding",
+        "dx10-binding",
+        "dx11-binding",
+        "dx12-binding"
+      ],
+      "platform": "windows",
+      "version>=": "1.85"
+    },
+    {
+      "name": "imgui",
+      "features": [
+        "docking-experimental",
+        "sdl2-binding",
+        "opengl3-binding",
+        "freetype",
+        "metal-binding",
+        "osx-binding"
+      ],
+      "version>=": "1.85",
+      "platform": "osx"
+    }
+  ],
+  "builtin-baseline": "f9bea5d58186dc14e7e33132e43b52222147f51e"
+}
