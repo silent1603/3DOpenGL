@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 
-project(BreakOut)
+project(Core)
 
 set(SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -36,6 +36,10 @@ target_link_libraries(Core PRIVATE $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
                                         PRIVATE imgui::imgui
 )
 
+if(WIN32)
+    target_compile_definitions(Core PRIVATE GAME_CORE_WINDOWS  
+                                        PRIVATE GAME_CORE_EXPORTS_DLL )
+endif()
 
 set_target_properties(Core PROPERTIES 
         ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/lib"
