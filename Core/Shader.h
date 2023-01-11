@@ -1,5 +1,4 @@
 #pragma once
-#include "pch.h"
 #include <glad/glad.h>
 #include <EASTL/string.h>
 #include <EASTL/shared_ptr.h>
@@ -20,10 +19,10 @@ namespace Core
     public:
         uint32_t ID = 0;
         Shader()  =default;
-        explicit Shader(Shader& s) noexcept;
-        explicit Shader(const Shader& s) noexcept;
-        explicit Shader(Shader&& s) noexcept;
-        explicit Shader(const Shader&& s) noexcept;
+        //explicit Shader(Shader& s) noexcept;
+        //explicit Shader(const Shader& s) noexcept;
+        //explicit Shader(Shader&& s) noexcept;
+        //explicit Shader(const Shader&& s) noexcept;
         ~Shader();
 
         eastl::shared_ptr<Shader> Bind();

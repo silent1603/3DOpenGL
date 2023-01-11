@@ -36,6 +36,8 @@ target_link_libraries(Core PRIVATE $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
                                         PRIVATE imgui::imgui
 )
 
+target_precompile_headers(Core PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/CorePCH.h)
+
 if(WIN32)
     target_compile_definitions(Core PRIVATE GAME_CORE_WINDOWS  
                                         PRIVATE GAME_CORE_EXPORTS_DLL )

@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.13)
 #check is vcpkg is install
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake CACHE STRING "Vcpkg toolchain file")
 
-set(RELEASE_PATH "${PROJECT_SOURCE_DIR}/release")
-set(DEBUG_PATH "${PROJECT_SOURCE_DIR}/debug")
+set(RELEASE_PATH "${CMAKE_SOURCE_DIR}/release")
+set(DEBUG_PATH "${CMAKE_SOURCE_DIR}/bin")
 project(GameOpenGL)
 
 find_package(EASTL CONFIG REQUIRED)

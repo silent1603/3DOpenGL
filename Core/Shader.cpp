@@ -151,4 +151,9 @@ namespace Core
             break;
         }
     }
+
+    Shader::~Shader()
+    {
+
+    }
 }
