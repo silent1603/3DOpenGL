@@ -5,6 +5,6 @@ int main(int argc , char** argv)
     Core::Log::Init();
     Game game(600,300);
     game.Init();
-    GAME_INFO("Hello World");
+    game.Running();
     return 0;
 }
